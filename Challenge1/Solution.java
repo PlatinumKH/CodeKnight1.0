@@ -6,15 +6,26 @@ import java.util.regex.*;
 
 public class Solution {
 
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int cases = in.nextInt();
+    public static void main(String[] args) throws java.io.IOException {
+
+    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    	String line;
+
+        line = br.readLine();
+        int cases = Integer.parseInt(line);
 
         for (int i = 0; i < cases; i++){
-        	int bases = in.nextInt();
+
+        	line = br.readLine();
+
+        	int bases = Integer.parseInt(line);
+
         	int[] area = new int[bases];
+
+        	String[] stringedInts = br.readLine().split(" ");
+
         	for (int j = 0; j < bases; j++){
-        		area[j] = in.nextInt();
+        		area[j] = Integer.parseInt(stringedInts[j]);
         	}
 
         	Arrays.sort(area);
